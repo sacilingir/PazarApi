@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36212.18 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{752CBB6F-749F-442F-BA5D-EB11CF3982A2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{720D3E77-B5F6-40EB-A580-8CA1FB9570B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PazarApi.Domain", "Core\PazarApi.Domain\PazarApi.Domain.csproj", "{922CE849-752A-44E7-812E-88E1348AB03F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PazarApi.Application", "Core\PazarApi.Application\PazarApi.Application.csproj", "{C34ECCF4-4EB3-496E-918F-EA458B1EE835}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PazarApi.Infrastructure", "Infrastructure\PazarApi.Infrastructure\PazarApi.Infrastructure.csproj", "{34242008-4485-4DAC-8B20-62ACDED126C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PazarApi.Persistence", "Infrastructure\PazarApi.Persistence\PazarApi.Persistence.csproj", "{277592CF-BBDA-4A01-9E4F-9127510DC0D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PazarApi.Api", "Presentation\PazarApi.Api\PazarApi.Api.csproj", "{BB56A19B-83E8-4B63-85FA-95188EFA7AE2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{922CE849-752A-44E7-812E-88E1348AB03F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{922CE849-752A-44E7-812E-88E1348AB03F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{922CE849-752A-44E7-812E-88E1348AB03F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{922CE849-752A-44E7-812E-88E1348AB03F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C34ECCF4-4EB3-496E-918F-EA458B1EE835}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C34ECCF4-4EB3-496E-918F-EA458B1EE835}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C34ECCF4-4EB3-496E-918F-EA458B1EE835}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C34ECCF4-4EB3-496E-918F-EA458B1EE835}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34242008-4485-4DAC-8B20-62ACDED126C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34242008-4485-4DAC-8B20-62ACDED126C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34242008-4485-4DAC-8B20-62ACDED126C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34242008-4485-4DAC-8B20-62ACDED126C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{277592CF-BBDA-4A01-9E4F-9127510DC0D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{277592CF-BBDA-4A01-9E4F-9127510DC0D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{277592CF-BBDA-4A01-9E4F-9127510DC0D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{277592CF-BBDA-4A01-9E4F-9127510DC0D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB56A19B-83E8-4B63-85FA-95188EFA7AE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB56A19B-83E8-4B63-85FA-95188EFA7AE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB56A19B-83E8-4B63-85FA-95188EFA7AE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB56A19B-83E8-4B63-85FA-95188EFA7AE2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{922CE849-752A-44E7-812E-88E1348AB03F} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{C34ECCF4-4EB3-496E-918F-EA458B1EE835} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{34242008-4485-4DAC-8B20-62ACDED126C8} = {752CBB6F-749F-442F-BA5D-EB11CF3982A2}
+		{277592CF-BBDA-4A01-9E4F-9127510DC0D5} = {752CBB6F-749F-442F-BA5D-EB11CF3982A2}
+		{BB56A19B-83E8-4B63-85FA-95188EFA7AE2} = {720D3E77-B5F6-40EB-A580-8CA1FB9570B7}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5FAB4204-3993-46D8-B262-B5E540159591}
+	EndGlobalSection
+EndGlobal
