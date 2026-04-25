@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using PazarApi.Domain.Entities;
+using System;
 
 namespace PazarApi.Persistence.Configurations
 {
@@ -13,11 +14,14 @@ namespace PazarApi.Persistence.Configurations
 
             Faker faker = new("tr");
 
+            // Bogus'u sabitliyoruz
+            Randomizer.Seed = new Random(123);
+
             Brand brand1 = new()
             {
                 Id = 1,
                 Name = faker.Commerce.Department(),
-                CreatedDate = DateTime.Now,
+                CreatedDate = DateTime.Parse("2024-01-01"), // Sabit Tarih
                 IsDeleted = false,
             };
 
@@ -25,7 +29,7 @@ namespace PazarApi.Persistence.Configurations
             {
                 Id = 2,
                 Name = faker.Commerce.Department(),
-                CreatedDate = DateTime.Now,
+                CreatedDate = DateTime.Parse("2024-01-01"), // Sabit Tarih
                 IsDeleted = false,
             };
 
@@ -33,10 +37,10 @@ namespace PazarApi.Persistence.Configurations
             {
                 Id = 3,
                 Name = faker.Commerce.Department(),
-                CreatedDate = DateTime.Now,
+                CreatedDate = DateTime.Parse("2024-01-01"), // Sabit Tarih
                 IsDeleted = true,
             };
-            builder.HasData(brand1,brand2,brand3);
+            builder.HasData(brand1, brand2, brand3);
         }
     }
 }

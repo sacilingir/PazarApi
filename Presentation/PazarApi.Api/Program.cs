@@ -1,4 +1,4 @@
-
+using PazarApi.Persistence;
 namespace PazarApi.Api
 {
     public class Program
@@ -17,6 +17,7 @@ namespace PazarApi.Api
                 .AddJsonFile("appsettings.json", optional: false) //Sisteme önce ana (ortak) ayar dosyasýný yüklemesini söyler. Buradaki optional: false parametresi çok kritiktir. Bu, dosyanýn zorunlu olduðunu belirtir. Eðer proje klasöründe appsettings.json dosyasý yoksa, uygulama ayaða kalkmaz ve hata verip çöker.
                 .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true); //Sihrin gerçekleþtiði yer burasýdýr! Koddaki {env.EnvironmentName} kýsmý, o anki ortama göre dinamik olarak dolacaktýr (Örn: appsettings.Development.json). Sistem önce ana dosyayý okur, sonra gelip bu ortama özel dosyayý okuyarak mevcut ayarlarý ezer/günceller.
 
+            builder.Services.AddPersistence(builder.Configuration);
 
             var app = builder.Build();
 
