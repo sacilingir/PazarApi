@@ -3,6 +3,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using PazarApi.Application.Interfaces.Repositories;
 using PazarApi.Persistence.Context;
+using PazarApi.Persistence.Repositories;
 
 namespace PazarApi.Persistence
 {
@@ -13,7 +14,8 @@ namespace PazarApi.Persistence
         {
             services.AddDbContext<AppDbContext>(opt => opt.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
 
-            services.AddScoped(typeof(IReadRepository<>), typeof(IReadRepository<>));
+            services.AddScoped(typeof(IReadRepository<>), typeof(ReadRepository<>));
+            services.AddScoped(typeof(IWriteRepository<>), typeof(WriteRepository<>));
         }
     }
 }
