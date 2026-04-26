@@ -17,6 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Core\PazarApi.Application\PazarApi.Application.csproj" />
     <ProjectReference Include="..\..\Core\PazarApi.Domain\PazarApi.Domain.csproj" />
   </ItemGroup>
 
