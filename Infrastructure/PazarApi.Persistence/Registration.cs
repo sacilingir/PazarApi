@@ -1,9 +1,13 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using PazarApi.Application.Interfaces;
 using PazarApi.Application.Interfaces.Repositories;
 using PazarApi.Persistence.Context;
 using PazarApi.Persistence.Repositories;
+using PazarApi.Persistence.UnitOfWorks;
+
+
 
 namespace PazarApi.Persistence
 {
@@ -16,6 +20,7 @@ namespace PazarApi.Persistence
 
             services.AddScoped(typeof(IReadRepository<>), typeof(ReadRepository<>));
             services.AddScoped(typeof(IWriteRepository<>), typeof(WriteRepository<>));
+            services.AddScoped<IUnitOfWork,UnitOfWork>();
         }
     }
 }
